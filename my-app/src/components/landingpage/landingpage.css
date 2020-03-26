@@ -1,0 +1,9 @@
+.LandingPage {
+    z-index: 1;
+}
+
+.LandingPage-rightcloud {
+  height: 20vmin;
+  float: right;
+}
+
