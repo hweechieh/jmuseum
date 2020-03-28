@@ -1,9 +1,122 @@
-.LandingPage {
-    z-index: 1;
+.Background {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.LandingPage-rightcloud {
-  height: 20vmin;
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .Background {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
+.Vignette {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .Vignette {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
+.Rightcloud {
+  z-index: 1;
+  max-height: 15vmin;
+  min-height: 10vmin;
   float: right;
+  position: relative;
+  right: -25px;
+  bottom: -400px;
+
+  animation-direction: normal;
+  animation: animation 8s infinite;
+  animation-timing-function: ease-in-out;
 }
 
+    @keyframes animation {
+    0%   {right: -25px; bottom: -400px; opacity: 0.5;}
+    25%  {right: -10px; bottom: -380px; opacity: 0.7;}
+    35%  {right: 0px; bottom: -360px; opacity: 1;}
+    50%  {right: 30px; bottom: -350px; opacity: 1;}
+    75%  {right: 40px; bottom: -370px; opacity: 0.7;}
+    85%  {right: 50px; bottom: -380px; opacity: 0.5;}
+    100% {right: 60px; bottom: -400px; opacity: 0;}
+  }
+
+
+.Leftcloud01 {
+  z-index: 1;
+  max-height: 28vmin;
+  min-height: 10vmin;
+  float: left;
+  position: relative;
+  left: -50px;
+  top: 50px;
+}
+
+
+.Leftcloud02 {
+  z-index: 1;
+  height: 10vmin;
+  float: left;
+  position: relative;
+  left: -130px;
+  top: 240px;
+}
+
+
+.Title {
+  z-index: 1;
+  height: 50vmin;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  right: 90px;
+  top: 200px;
+}
+
+
+.Cloud01 {
+  z-index: 1;
+  height: 8vmin;
+  position: relative;
+  left: 870px;
+  bottom: 70px;
+}
+
+
+.Cloud02 {
+  z-index: 1;
+  height: 6vmin;
+  position: relative;
+  left: 520px;
+  top: 50px;
+}
